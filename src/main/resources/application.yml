@@ -1,0 +1,13 @@
+
+server:
+  port: 2023
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/repeatProject
+    username: demoAccount
+    password: demoaccount
+
+  jpa:
+    hibernate:
+      ddl-auto: update
