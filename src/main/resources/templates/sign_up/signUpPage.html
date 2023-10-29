@@ -1,0 +1,42 @@
+<!-- this is code have token from https://codepen.io/clevertechie/pen/NbxyPX-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="/css/sign_up/signUpPage.css">
+        <title>Sign Up</title>
+    </head>
+
+    <body>
+
+        <div class="body-content">
+
+            <div class="module">
+
+                <h1>Create an account</h1>
+
+                <form class="form" action="/saveSignUpToBase" method="post" enctype="multipart/form-data" autocomplete="off">
+
+                    <div class="alert alert-error"></div>
+                    <input type="text" placeholder="User Name" name="username_up" required />
+
+                    <input type="email" placeholder="Email" name="email_up" required />
+
+                    <input type="password" placeholder="Password" name="password_up" autocomplete="new-password" required />
+
+                    <input type="password" placeholder="Confirm Password" name="confirm_password_up" autocomplete="new-password" required />
+
+<!--                    <div class="avatar"><label>Select your avatar: </label><input type="file" name="avatar" accept="image/*" required /></div>-->
+
+                    <input type="submit" value="Register" name="" class="btn btn-block btn-primary" />
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
