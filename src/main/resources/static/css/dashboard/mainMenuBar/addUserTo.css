@@ -1,0 +1,108 @@
+/*Part 1*/
+
+div#reg-form-wrapper {
+    width: 650px;
+}
+
+div#registrationform {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    color: rgb(51, 51, 51);
+
+}
+div#registrationform form {
+
+    background-color: #ebebeb;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+div#registrationform h2 {
+    font-size: 36px;
+    letter-spacing: -.03em;
+    color: #197185;
+    margin: 0;
+}
+div#registrationform input {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin: 10px 10px 15px 0;
+    font-size: 13px;
+    color: #666666;
+    display: block;
+    width: 150px;
+}
+
+hr {
+    background-color: #dadada;
+    border-width: 0;
+    border-top: #dadada 1px solid;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2.5em;
+}
+
+label{
+    width:160px;
+    display:block;
+    float:left;
+    text-align:right;
+    padding:0 15px 0 0;
+    font-weight: bold;
+    line-height: 33px;
+}
+ul.nobullet{
+    list-style-type:none;
+}
+li {
+    margin: 0 0 15px 0;
+}
+li .fields {
+    position: relative;
+}
+.fields .error {
+    width: 250px;
+    position: absolute;
+    right: 0;
+}
+li input {
+    padding:2px;
+    border:solid 1px #7295ba;
+}
+div#registrationform li input:focus {
+    outline: none;
+}
+div#registrationform li input.valid {
+    outline: 1px solid rgba(0, 255, 0, 0.7);
+}
+div#registrationform li input.invalid {
+    outline: 1px solid rgba(255, 0, 0, 0.7);
+}
+div#registrationform li div.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+div#registrationform #submit_btn {
+    width:111px;
+    height:33px;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+    position: relative;
+    left: 279px;
+
+    background: rgba(75,75,75,1);
+    background-image: none;
+    border-bottom-color: rgb(51, 51, 51);
+    border-radius: 50px;
+    margin: 20px 5px 5px 5px;
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    text-shadow: rgb(51, 51, 51) 0px -1px 0px;
+    text-transform: uppercase;
+}
+div#registrationform #submit_btn:hover {
+    background: #006e6e;
+}

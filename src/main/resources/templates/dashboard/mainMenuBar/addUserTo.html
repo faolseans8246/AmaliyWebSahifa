@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/dashboard/mainMenuBar/addUserTo.css">
+        <title>Add user to base</title>
+    </head>
+
+    <body>
+
+    <!---------------------Part 1-------------------------->
+        <div id="reg-form-wrapper">
+
+            <div id="registrationform">
+
+                <h2>Registration</h2>
+                <hr>
+
+                <form  action="/mainMenu/saveToBaseFromListOfUser" method="POST" name="">
+
+                    <input type="hidden" name="action" value="register" />
+
+                    <ul class="nobullet">
+
+                        <li>
+                            <div class="fields">
+                                <div id="usernameError" class="error">Username must contain upper case, lower case, and at least 1 number.  May not contain special characters.</div>
+                                <label for="username">Firstname</label><input type="text" id="username" name="add_firstname"  value="" />
+                            </div>
+                        </li><!--must contain a lower and upper case letter and at least 1 number. Cannot contain special characters -->
+
+                        <li>
+                            <div class="fields">
+                                <div id="usernameError" class="error">Username must contain upper case, lower case, and at least 1 number.  May not contain special characters.</div>
+                                <label for="username">Lastname</label><input type="text" id="username" name="add_lastname"  value="" />
+                            </div>
+                        </li><!--must contain a lower and upper case letter and at least 1 number. Cannot contain special characters -->
+
+                        <li>
+                            <div class="fields">
+                                <div id="usernameError" class="error">Username must contain upper case, lower case, and at least 1 number.  May not contain special characters.</div>
+                                <label for="username">Data</label><input type="text" id="username" name="add_data"  value="" />
+                            </div>
+                        </li><!--must contain a lower and upper case letter and at least 1 number. Cannot contain special characters -->
+
+                        <li>
+                            <div class="fields">
+                                <div id="usernameError" class="error">Username must contain upper case, lower case, and at least 1 number.  May not contain special characters.</div>
+                                <label for="username">Address</label><input type="text" id="username" name="add_address"  value="" />
+                            </div>
+                        </li><!--must contain a lower and upper case letter and at least 1 number. Cannot contain special characters -->
+
+                        <li>
+                            <div class="fields">
+                                <div id="usernameError" class="error">Username must contain upper case, lower case, and at least 1 number.  May not contain special characters.</div>
+                                <label for="username">Phone number</label><input type="text" id="username" name="add_phone"  value="" />
+                            </div>
+                        </li><!--must contain a lower and upper case letter and at least 1 number. Cannot contain special characters -->
+
+<!--                        <li>-->
+
+<!--                            <div class="fields">-->
+<!--                                <div class="error" id="passwordError">Password must contain 2 or more numbers and be 8 to 15 characters in length</div>-->
+<!--                                <label for="password">Password</label><input type="password" id="password" name="password" value="" />-->
+<!--                            </div>-->
+<!--                        </li>&lt;!&ndash;must contain at least 2 numbers and be 8 to 15 characters in length&ndash;&gt;-->
+
+<!--                        <li>-->
+
+<!--                            <div class="fields">-->
+<!--                                <div class="error" id="usernumberError">User Number must be 36 digits long and consist only of numbers.</div>-->
+<!--                                <label for="usernumber">User Number</label><input type="text" id="usernumber" name="usernumber" value="" />-->
+<!--                            </div>-->
+<!--                        </li>&lt;!&ndash;must be 36 digits and have no non-numeral characters&ndash;&gt;-->
+
+<!--                        <li>-->
+<!--                            <label for="geoglocation">Geographic Location</label><input type="text" id="geoglocation" name="geoglocation" value="" />-->
+<!--                        </li>&lt;!&ndash;currently no input validation is used as the input validation would be different for US and non-US locations&ndash;&gt;-->
+
+                    </ul>
+
+                    <input type="submit" alt="register" name="register" value="Register" id="submit_btn" />
+
+                </form>
+
+                <a href="/mainMenu/goToUsersPage">Go to users list</a>
+
+            </div>
+
+
+        </div>
+
+    </body>
+</html>
