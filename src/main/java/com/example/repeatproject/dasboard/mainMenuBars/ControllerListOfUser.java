@@ -2,10 +2,10 @@ package com.example.repeatproject.dasboard.mainMenuBars;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/mainMenu")
@@ -44,9 +44,42 @@ public class ControllerListOfUser {
             @RequestParam (value = "add_phone") String phone
 
     ) {
-        rootServiceListOfUser.saveListOfUsersToBase(firstname, lastname, data, address, phone);
+
+        if (firstname.isEmpty() || lastname.isEmpty() || data.isEmpty() || address.isEmpty() || phone.isEmpty()) {
+            return "/dashboard/mainMenuBar/addUserTo";
+        } else {
+            rootServiceListOfUser.saveListOfUsersToBase(firstname, lastname, data, address, phone);
+
+            return "/dashboard/mainMenuBar/listOfUsers";
+        }
+    }
+
+
+//    get nites from base and set list of user page
+    @GetMapping("/getNotesFromBase")
+    public String getNotesFromBase(Model model) {
+        List<TableListOfUsers> tableListOfUsers = rootServiceListOfUser.getAllUsers();
+        model.addAttribute("listofusers", tableListOfUsers);
 
         return "/dashboard/mainMenuBar/listOfUsers";
     }
+
+//    delete item in list of users by id
+    @GetMapping("/deleteIteInListOfUser/{id}")
+    public String deleteItemInUsersList(@PathVariable long id) {
+        rootServiceListOfUser.deleteItemListOfUser(id);
+
+        return "/dashboard/mainMenuBar/listOfUsers";
+    }
+
+
+//    delete all items in list of users
+
+    @GetMapping("/deleteAllItems")
+     public String deleteAllItemsInList() {
+        rootServiceListOfUser.deleteAllUsers();
+
+        return "/dashboard/mainMenuBar/listOfUsers";
+     }
 
 }

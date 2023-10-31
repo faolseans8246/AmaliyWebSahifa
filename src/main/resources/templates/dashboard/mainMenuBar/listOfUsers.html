@@ -1,90 +1,120 @@
 <!-- this is code have token from  https://codepen.io/mlegakis/pen/jBYPGr-->
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="/css/dashboard/mainMenuBar/listOfUsers.css">
-        <title>List of Users</title>
-    </head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/dashboard/mainMenuBar/listOfUsers.css">
+    <title>List of Users</title>
+</head>
 
-    <body>
+<body>
 
-        <p>Basic on pen by <a href="/mainMenu/goToAddPage">Add user</a></p>
-        <p> </p>
+<p>Basic on pen by <a href="/mainMenu/goToAddPage">Add user</a></p>
+<p> </p>
 
-        <hr>
+<hr>
 
-        <h2>List of Users and her all notes</h2>
-
-
-        <table id="content-table3" class="table-responsive-full sort-table">
-
-            <thead>
-
-                <tr>
-                    <th class="title">Firstname
-                        <div class="sort-table-arrows">
-                            <a href="javascript:sort(true, 'title', 'content-table3');"><button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button></a>
-                            <a href="javascript:sort(false, 'title', 'content-table3');"><button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button></a>
-                        </div>
-                    </th>
-
-                    <th class="composer">Lastname
-                        <div class="sort-table-arrows">
-                            <a href="javascript:sort(true, 'composer', 'content-table3');"><button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button></a>
-                            <a href="javascript:sort(false, 'composer', 'content-table3');"><button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button></a>
-                        </div>
-                    </th>
-
-                    <th class="lyrics">Data
-                        <div class="sort-table-arrows">
-                            <a href="javascript:sort(true, 'lyrics', 'content-table3');"><button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button></a>
-                            <a href="javascript:sort(false, 'lyrics', 'content-table3');"><button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button></a>
-                        </div>
-                    </th>
-
-                    <th class="set">Address
-                        <div class="sort-table-arrows">
-                            <a href="javascript:sort(true, 'set', 'content-table3');"><button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button></a>
-                            <a href="javascript:sort(false, 'set', 'content-table3');"><button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button></a>
-                        </div>
-                    </th>
-
-                    <th class="set">Phone number
-                        <div class="sort-table-arrows">
-                            <a href="javascript:sort(true, 'set', 'content-table3');"><button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button></a>
-                            <a href="javascript:sort(false, 'set', 'content-table3');"><button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button></a>
-                        </div>
-                    </th>
-
-                    <th class="arranger">Arranger / Editing</th>
-                </tr>
-
-            </thead>
+<h2>List of Users and her all notes</h2>
 
 
-            <tbody>
+<table id="content-table3" class="table-responsive-full sort-table">
 
-                <tr>
-                    <td data-label="Title" class="title title"></td>
-                    <td data-label="Composer" class="composer"></td>
-                    <td data-label="Lyrics" class="lyrics"></td>
-                    <td data-label="Set" class="set"></td>
-                    <td data-label="Arranger"></td>
-                    <td data-label="Arranger"></td>
+    <thead>
 
-                </tr>
+    <tr>
 
-            </tbody>
+        <th class="title">Firstname
+            <div class="sort-table-arrows">
+                <a href="javascript:sort(true, 'title', 'content-table3');">
+                    <button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button>
+                </a>
+                <a href="javascript:sort(false, 'title', 'content-table3');">
+                    <button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button>
+                </a>
+            </div>
+        </th>
 
-        </table>
+        <th class="composer">Lastname
+            <div class="sort-table-arrows">
+                <a href="javascript:sort(true, 'composer', 'content-table3');">
+                    <button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button>
+                </a>
+                <a href="javascript:sort(false, 'composer', 'content-table3');">
+                    <button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button>
+                </a>
+            </div>
+        </th>
 
-        <div class="goToHomePage">
-            <p>
-                <a href="/dashboard/goToDashboardPage">Home page</a>
-            </p>
-        </div>
+        <th class="lyrics">Data
+            <div class="sort-table-arrows">
+                <a href="javascript:sort(true, 'lyrics', 'content-table3');">
+                    <button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button>
+                </a>
+                <a href="javascript:sort(false, 'lyrics', 'content-table3');">
+                    <button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button>
+                </a>
+            </div>
+        </th>
+
+        <th class="set">Address
+            <div class="sort-table-arrows">
+                <a href="javascript:sort(true, 'set', 'content-table3');">
+                    <button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button>
+                </a>
+                <a href="javascript:sort(false, 'set', 'content-table3');">
+                    <button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button>
+                </a>
+            </div>
+        </th>
+
+        <th class="set">Phone number
+            <div class="sort-table-arrows">
+                <a href="javascript:sort(true, 'set', 'content-table3');">
+                    <button class="button" title="Αύξουσα ταξινόμηση"><i class="fa fa-chevron-down"></i></button>
+                </a>
+                <a href="javascript:sort(false, 'set', 'content-table3');">
+                    <button class="button" title="Φθίνουσα ταξινόμηση"><i class="fa fa-chevron-up"></i></button>
+                </a>
+            </div>
+        </th>
+
+        <th class="arranger">Arranger / Editing</th>
+    </tr>
+
+    </thead>
+
+
+    <tbody>
+
+        <tr th:each="user: ${listofusers}">
+
+            <td th:text="${user.firstname_list}" data-label="Title" class="title title"></td>
+            <td th:text="${user.lastname_list}" data-label="Composer" class="composer"></td>
+            <td th:text="${user.data_list}" data-label="Lyrics" class="lyrics"></td>
+            <td th:text="${user.address_list}" data-label="Set" class="set"></td>
+            <td th:text="${user.phone_list}" data-label="Arranger"></td>
+            <td data-label="Arranger">
+                <span>
+                    <a th:href="'/mainMenu/deleteIteInListOfUser/' + ${user.id_list}">Delete</a>
+                </span>
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<div class="goToHomePage">
+    <span>
+        <a href="/dashboard/goToDashboardPage">Home page</a>
+
+        <a href="/mainMenu/getNotesFromBase">repeat</a>
+        <a href="/mainMenu/deleteAllItems">refresh</a>
+    </span>
+</div>
 
 <!--        <h1>Responsive & Sortable table solutions</h1>-->
 <!--        <h2>Simple table - responsive (overflow-y)</h2>-->
@@ -184,5 +214,5 @@
 <!--        </table>-->
 
 
-    </body>
+</body>
 </html>
