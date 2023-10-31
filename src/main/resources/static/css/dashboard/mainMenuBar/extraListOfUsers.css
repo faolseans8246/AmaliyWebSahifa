@@ -1,0 +1,54 @@
+
+/*part of add user button*/
+.add-user a {
+    border: 1px solid deeppink;
+    border-radius: 5px;
+    background-color: #00aeff;
+    color: yellow;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.add-user a:active {
+    border: 1px solid deeppink;
+    border-radius: 15px;
+    background-color: #40ff00;
+    color: #ff002f;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.goToHomePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 15px;
+    padding: 10px;
+
+}
+
+/*Part of bottom buttons*/
+.home-link, .repeat-link, .refresh-link {
+    margin: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: coral;
+    background-color: #0fe7b4;
+}
+
+.home-link:active, .repeat-link:active, .refresh-link:active {
+    margin: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 3px solid blue;
+    border-radius: 15px;
+    color: #f3094f;
+    background-color: #1a251a;
+}
+
+/*part of delete buttons*/
+.delete-button {
+
+}

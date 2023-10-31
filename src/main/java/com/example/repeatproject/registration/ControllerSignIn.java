@@ -26,9 +26,13 @@ public class ControllerSignIn {
 //    Save notes to database from Sign in page
     @PostMapping("/saveSignInToBase")
     public String saveToBazaSignIn(@RequestParam (value = "login_in") String username_in, @RequestParam (value = "parol_in") String password_in) {
-        rootServiceSignIn.saveLoginAndParol(username_in, password_in);
 
-        return "/dashboard/mainPage";
+        if (username_in.isEmpty() || password_in.isEmpty()) {
+            return "redirect:/";
+        } else {
+            rootServiceSignIn.saveLoginAndParol(username_in, password_in);
+            return "/dashboard/mainPage";
+        }
     }
 
 //        go to Sign in page from sign up page
