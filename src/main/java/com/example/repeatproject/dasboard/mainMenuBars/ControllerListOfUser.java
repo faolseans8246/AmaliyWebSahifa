@@ -37,6 +37,7 @@ public class ControllerListOfUser {
 //    save users to base from add users page
     @PostMapping("/saveToBaseFromListOfUser")
     public String saveListOfUsersToBase(
+//            @RequestParam (value = "add_id", required = false) String ids,
             @RequestParam (value = "add_firstname") String firstname,
             @RequestParam (value = "add_lastname") String lastname,
             @RequestParam (value = "add_data") String data,
@@ -83,6 +84,30 @@ public class ControllerListOfUser {
      }
 
 
+//     Update items in List of Tables
+    @GetMapping("/updateUserNotes/{ids}")
+     public String updateIdItems(@PathVariable (value = "ids") long ids, Model model) {
+        TableListOfUsers tableListOfUsersIds = rootServiceListOfUser.updateRows(ids);
 
+        model.addAttribute("updateItems", tableListOfUsersIds);
+        return "/dashboard/mainMenuBar/updateUserInList";
+     }
+
+
+//     resave users to base from list of user
+    @PostMapping("/resaveToBaseUsers")
+     public String reSaveToBaseUsers(@ModelAttribute ("updateItems") TableListOfUsers tableListOfUsers) {
+        rootServiceListOfUser.reSaveUsers(tableListOfUsers);
+
+        return "/dashboard/mainMenuBar/listOfUsers";
+     }
+
+
+//     Go to list of user page
+
+    @GetMapping("/goToListOfUserPage")
+    public String goToListOfUsers() {
+        return "/dashboard/mainMenuBar/listOfUsers";
+    }
 
 }

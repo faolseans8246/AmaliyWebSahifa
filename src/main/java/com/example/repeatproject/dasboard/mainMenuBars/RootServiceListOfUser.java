@@ -18,4 +18,10 @@ public interface RootServiceListOfUser {
 //    delete all items in list of user
     public void deleteAllUsers();
 
+//    update notes in table
+    public TableListOfUsers updateRows(long ids);
+
+//    resave notes to base
+    public void reSaveUsers(TableListOfUsers tableListOfUsers);
+
 }

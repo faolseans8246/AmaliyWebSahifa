@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ServiceListOfUser implements RootServiceListOfUser {
@@ -49,6 +50,28 @@ public class ServiceListOfUser implements RootServiceListOfUser {
     @Override
     public void deleteAllUsers() {
         this.repositoryListOfUser.deleteAll();
+    }
+
+    //    update notes in table
+
+    @Override
+    public TableListOfUsers updateRows(long ids) {
+        Optional <TableListOfUsers> tableListOfUsersId = repositoryListOfUser.findById(ids);
+        TableListOfUsers tableListOfUsers = null;
+
+        if (tableListOfUsersId.isPresent()) {
+            tableListOfUsers = tableListOfUsersId.get();
+        } else {
+            throw new RuntimeException("User ID bilan muammo mavjud! -> " + tableListOfUsersId);
+        }
+
+        return tableListOfUsers;
+    }
+
+    //    resave notes to base
+    @Override
+    public void reSaveUsers(TableListOfUsers tableListOfUsers) {
+        repositoryListOfUser.save(tableListOfUsers);
     }
 
 }

@@ -15,7 +15,7 @@
     
         <p class="add-user">
             If you want append user in your list table, you should click on here:
-            <a href="/mainMenu/goToAddPage">Add user</a>
+            <a class="btn btn-outline-warning" href="/mainMenu/goToAddPage">Add user</a>
         </p>
 
         <p> </p>
@@ -104,7 +104,8 @@
                     <td data-label="Arranger">
                         <span>
                             <a class="btn btn-outline-danger" th:href="'/mainMenu/deleteIteInListOfUser/' + ${user.id_list}">Delete</a>
-    <!--                        <a th:href="">Update</a>-->
+                            <a class="btn btn-outline-primary" th:href="'/mainMenu/updateUserNotes/' + ${user.id_list}">Update</a>
+<!--                            <a class="btn btn-outline-primary" th:href="@{/mainMenu/updateUserNotes/{ids} (ids = {${user.id_list}})}">Update</a>-->
 
                         </span>
                     </td>
@@ -118,10 +119,10 @@
 
         <div class="goToHomePage">
             <span>
-                <a class="home-link" href="/dashboard/goToDashboardPage">Home page</a>
+                <a class="btn btn-outline-info" href="/dashboard/goToDashboardPage">Home page</a>
 
-                <a class="repeat-link" href="/mainMenu/getNotesFromBase">repeat</a>
-                <a class="refresh-link" href="/mainMenu/deleteAllItems">refresh</a>
+                <a class="btn btn-outline-success" href="/mainMenu/getNotesFromBase">repeat</a>
+                <a class="btn btn-outline-danger" href="/mainMenu/deleteAllItems">refresh</a>
             </span>
         </div>
 
