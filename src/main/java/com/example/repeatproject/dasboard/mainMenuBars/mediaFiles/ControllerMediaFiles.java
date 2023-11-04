@@ -34,4 +34,12 @@ public class ControllerMediaFiles {
     }
 
 
+//    go to downloads deocument from media files
+
+    @GetMapping("/go_toDownloads_document_from_media_files")
+    public String goToDownloadDocumentFromMediaFile() {
+        return "/dashboard/mainMenuBar/mediaFiles/documentFiles/downloadDocument";
+    }
+
+
 }
