@@ -23,6 +23,7 @@ public class TableUpdateDocFiles implements Serializable {
     @Column
     private String doc_file_name;
 
+//    @Lob
     @Column
     private byte[] doc_file_data;
 

@@ -11,33 +11,36 @@
     
     <body>
 
-        <form action="/update_items/save_uploaded_doc" method="post" enctype="multipart/form-data">
-            <div class="drag-area">
+        <div>
+            <form action="/update_items/save_uploaded_doc" method="post" enctype="multipart/form-data">
+                <div class="drag-area">
 
-                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
 
-<!--                <div>-->
-<!--                    <h3>[[${message}]]</h3>-->
-<!--                </div>-->
+                    <!--                <div>-->
+                    <!--                    <h3>[[${message}]]</h3>-->
+                    <!--                </div>-->
 
-                <header>Drag & Drop to Upload File</header>
-                <span>OR</span>
+                    <header>Fayli tanlang va uni bazaga joylang</header>
 
-                <div class="main-but">
-                    <input type="file" name="fileUp" accept=".txt, .doc, .docx, .xls, .xlsx, .pdf, .ppt, .pptx">
+                    <div class="main-but">
+                        <input type="file" name="fileUp" accept=".txt, .doc, .docx, .xls, .xlsx, .pdf, .ppt, .pptx">
+
+                    </div>
 
                     <button class="sent-doc">Yuborish</button>
+
                 </div>
 
-                <div class="back-but">
-                    <a href="/update_items/go_back_page">go to back</a>
-                </div>
 
+            </form>
+
+            <div class="back-but">
+                <a href="/update_items/go_back_page">go to back</a>
             </div>
+        </div>
 
-        </form>
 
-
-        <script th:src="@{/js/dashboard_main/mainMenuBar/mediaFiles/documentFiles/downloadDocuments.js}"></script>
+<!--        <script th:src="@{/js/dashboard_main/mainMenuBar/mediaFiles/documentFiles/downloadDocuments.js}"></script>-->
     </body>
 </html>

@@ -74,7 +74,8 @@ body{
     background-color: chocolate;
     color: blueviolet;
     padding: 5px 25px;
-    margin: 25px auto;
+    margin: 25px 10px;
+    width: 140px;
 }
 
 .back-but:hover {
@@ -83,7 +84,8 @@ body{
     background-color: #1ed2c3;
     color: blueviolet;
     padding: 5px 25px;
-    margin: 25px auto;
+    margin: 25px 10px;
+    width: 140px;
 }
 
 .back-but a {
