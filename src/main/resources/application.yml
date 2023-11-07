@@ -2,6 +2,7 @@
 server:
   port: 2023
 
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/repeatProject
@@ -13,6 +14,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+
 
       show-sql: true
       properties:
@@ -26,6 +29,9 @@ spring:
       max-file-size: 200MB
       max-request-size: 215MB
 
+
+attachment:
+  file-dir: uploads
 
 
 #      spring.datasource.driver-class-name=org.postgresql.Driver

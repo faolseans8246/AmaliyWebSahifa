@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Attach Files</title>
+</head>
+<body>
+
+    <h1>Attachment Management</h1>
+
+    <form action="/attBase/saveNoteAtt" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileNote" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <h2>Attachments:</h2>
+    <ul>
+        <!-- Attachmentlarni ko'rish uchun -->
+        <li>
+            {<a href="/attBase/attTableNote/{ids}">attachmentFileName</a>}
+            (<a href="/attBase/listNotes">Hammasini Ko'rish</a>)
+            [<a href="/attBase/delAttNotes/{ids}" onclick="return confirm('Uchirmoqchimisiz?')">Delete</a>]
+        </li>
+    </ul>
+
+
+<!--    <script>-->
+<!--        function deleteAttachNotes(ids) {-->
+<!--            if (confirm('Uchirmoqchimisiz?')) {-->
+<!--                fetch(`/attBase/delAttNotes/${ids}`, { method: 'DELETE' })-->
+<!--                    .then(response => {-->
+<!--                        if (response.status === 204) {-->
+<!--                            // O'chirish muvaffaqiyatli bajarildi, sahifani qayta yuklash-->
+<!--                            location.reload();-->
+<!--                        }-->
+<!--                    });-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+
+
+</body>
+</html>
