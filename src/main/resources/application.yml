@@ -1,6 +1,6 @@
 
 server:
-  port: 2023
+  port: 1212
 
 
 spring:
